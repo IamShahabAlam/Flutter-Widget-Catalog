@@ -125,7 +125,7 @@
 // }
 
 import 'package:flutter/material.dart';
-import 'package:widget_catalog/widgets/about_dialog.dart';
+import 'package:widget_catalog/widgets/alert_dialog.dart';
 
 void main() {
   runApp(const MyApp());
@@ -136,8 +136,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: AboutDialogWidget(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(useMaterial3: true),
+      home: const AlertDialogWidget(),
     );
   }
 }
